@@ -3,17 +3,21 @@ import './App.css'
 import { Container } from '@mui/material'
 import Header from './components/Header'
 import PokemonList from './components/PokemonList'
+import PokemonForm from './components/PokemonForm'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Header/>
       <Container>
-        <PokemonList/>
+        <Routes>
+          <Route path="/" element={<PokemonList />} />
+          <Route path="/add" element={<PokemonForm />} />
+        </Routes>
       </Container>
-      
-    </>
+    </BrowserRouter>
   )
 }
 

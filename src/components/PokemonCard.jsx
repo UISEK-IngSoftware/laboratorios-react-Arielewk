@@ -1,6 +1,7 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 export default function PokemonCard({ pokemon }) {
+
   return (
     <Card>
         <CardMedia
